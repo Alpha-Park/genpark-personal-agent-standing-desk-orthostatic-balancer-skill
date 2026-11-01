@@ -1,0 +1,24 @@
+{
+  "name": "genpark-personal-agent-standing-desk-orthostatic-balancer-skill",
+  "version": "1.0.0",
+  "description": "Models Cornell 20-8-2 sit-stand-walk ergonomic ratios, evaluates lipoprotein lipase suppression vs venous pooling, and schedules motorized desk transitions.",
+  "tools": [
+    {
+      "name": "calculate_sit_stand_orthostatic_strain",
+      "description": "Audits sit/stand balance, LPL suppression, and venous pooling risk.",
+      "parameters": {
+        "sitting_minutes_daily": "float",
+        "standing_minutes_daily": "float",
+        "walking_minutes_daily": "float (optional, default 30.0)"
+      }
+    },
+    {
+      "name": "generate_sit_stand_cadence_schedule",
+      "description": "Synthesizes a 30-minute cyclic Cornell 20-8-2 motorized desk adjustment schedule.",
+      "parameters": {
+        "workday_start": "string (optional, default '09:00')",
+        "workday_end": "string (optional, default '17:00')"
+      }
+    }
+  ]
+}
